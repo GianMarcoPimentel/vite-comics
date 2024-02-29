@@ -21,24 +21,26 @@
 </script>
 
 <template>
+    <div class="container">
     <nav>
-        <img src="/img/dc-logo.png" alt="Logo DC">
-        <ul>
-            <li v-for="currentLink in links">
-                <a href="">{{currentLink}}</a>
-            </li>
-           
-        </ul>
-    </nav>
+            <img src="/img/dc-logo.png" alt="Logo DC">
+            <ul>
+                <li v-for="currentLink in links">
+                    <a href="">{{currentLink}}</a>
+                </li>
+               
+            </ul>
+        </nav>
+    </div>
 </template>
 
 <style>
  nav{
-    height: 100px;
+    height: 120px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 20px 0px;
     img{
         height: 100%;;
     }

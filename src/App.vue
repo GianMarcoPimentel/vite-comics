@@ -1,9 +1,12 @@
 <script>
 import AppNav from './components/AppNav.vue';
 
+//importo l'header
+import AppHeader from './components/AppHeader.vue';
 export default{
     components: {
                 AppNav,
+                AppHeader,
             },
     data(){
         return{
@@ -15,7 +18,11 @@ export default{
 </script>
 
 <template>
-    <AppNav></AppNav>
+    
+
+        <AppNav></AppNav>
+        <AppHeader></AppHeader>
+   
 </template>
 
 <style lang="scss">
