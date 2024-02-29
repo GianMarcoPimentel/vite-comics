@@ -50,7 +50,9 @@
         
         .shopping{
             display: flex;
+            justify-content: center;
             gap: 10px;
+            font-size: 10px;
             .card{
                 display: flex;
                 align-items: center;

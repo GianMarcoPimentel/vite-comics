@@ -8,6 +8,7 @@ import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 
 //importo il footer
+import AddFooterBottom from './components/AddFooterBottom.vue';
 
 
 export default{
@@ -15,7 +16,7 @@ export default{
                 AppNav,
                 AppHeader,
                 AppMain,
-                
+                AddFooterBottom
             },
     data(){
         return{
@@ -32,6 +33,7 @@ export default{
         <AppNav></AppNav>
         <AppHeader></AppHeader>
         <AppMain></AppMain>
+        <AddFooterBottom></AddFooterBottom>
 </template>
 
 <style lang="scss">
