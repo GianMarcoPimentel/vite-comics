@@ -6,9 +6,13 @@ import AppHeader from './components/AppHeader.vue';
 
 // importo il m ain delle schede
 import AppMain from './components/AppMain.vue';
+ 
+//importo il footerTop
+import AddFooterTop from './components/AddFooterTop.vue';
 
-//importo il footer
+//importo il footerBottom
 import AddFooterBottom from './components/AddFooterBottom.vue';
+
 
 
 export default{
@@ -16,7 +20,8 @@ export default{
                 AppNav,
                 AppHeader,
                 AppMain,
-                AddFooterBottom
+                AddFooterTop,
+                AddFooterBottom,
             },
     data(){
         return{
@@ -33,6 +38,7 @@ export default{
         <AppNav></AppNav>
         <AppHeader></AppHeader>
         <AppMain></AppMain>
+        <AddFooterTop></AddFooterTop>
         <AddFooterBottom></AddFooterBottom>
 </template>
 

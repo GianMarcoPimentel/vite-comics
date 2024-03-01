@@ -1,6 +1,6 @@
 <script>
     export default {
-        nome: 'AppFooter',
+        nome: 'AppFooterBottom',
         data(){
         return {
             symbols:[
@@ -18,7 +18,7 @@
 </script>
 
 <template>
-<footer>
+<div class="footer-bottom">
     <div class="container">
         <div class="footer-bottom">
             <button class="btn"> Sign-up now!</button>
@@ -32,11 +32,11 @@
             </div>
         </div>
     </div>
-</footer>
+</div>
 </template>
 
 <style>
-footer{
+.footer-bottom{
     
     background-color: #303030;
     .footer-bottom{
