@@ -47,26 +47,34 @@
                     </li>
                 </ul>
             </div>
+
+            <div id="fourth-list">
+                <span id="title-list">DC COMICS</span>
+                <ul>
+                    <li v-for="shop in shops">
+                    {{ shop }}
+                    </li>
+                </ul>
+            </div>
             
             <div id="second-list">
                 <span id="title-list">DC COMICS</span>
+                <ul>
                     <li v-for="policy in policies">
                     {{ policy }}
                     </li>
+                </ul>
             </div>
 
             <div id="third-list">
                 <span id="title-list">DC COMICS</span>
+                <ul>
                     <li v-for="site in sites">
                     {{ site }}
                     </li>
+                </ul>
             </div>
-            <div id="fourth-list">
-                <span id="title-list">DC COMICS</span>
-                    <li v-for="shop in shops">
-                    {{ shop }}
-                    </li>
-            </div>
+            
         </div>
 
         <div class="logo">
@@ -77,15 +85,39 @@
 </template>
 
 <style>
+ul {
+    list-style: none;
+
+    padding: 0;
+}
 .footer-top{
-    
+    height: 370px;
     background-image: url('/img/footer-bg.jpg');
     background-size: cover;
     .container{
         display: flex;
         justify-content: space-between;
+        align-items: center;
+
+        overflow: hidden;
     }
-    #first-list{
+    .lists{
+        display: flex;
+        flex-flow: column wrap;
+        align-content: flex-start;
+        gap: 25px 30px;
+        height: 100%;
+
+        padding: 20px 0;
+
+        #title-list{
+            text-transform: uppercase;
+            font-size: 1.2em;
+
+            margin-bottom: 20px;
+        }
+    }
+   /*  #first-list{
         display: flex;
         flex-flow: column;
         justify-content: center;
@@ -97,11 +129,12 @@
             color: #ffffff40;
             list-style-type: none;
         }
-        .logo{
-            z-index: 999;
-            object-fit: cover;
-            
-        }
+    } */
+    .logo{
+        z-index: 999;
+        
+        object-fit: contain;
+        object-position: center;
     }
     
 }
