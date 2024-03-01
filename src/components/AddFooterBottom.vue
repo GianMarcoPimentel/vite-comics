@@ -15,7 +15,7 @@
         }
     }
     }
-</script>
+</script> 
 
 <template>
 <div class="footer-bottom">

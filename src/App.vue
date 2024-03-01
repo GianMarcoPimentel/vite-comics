@@ -16,7 +16,7 @@ import AddFooterBottom from './components/AddFooterBottom.vue';
 
 
 export default{
-    components: {
+    components: { 
                 AppNav,
                 AppHeader,
                 AppMain,

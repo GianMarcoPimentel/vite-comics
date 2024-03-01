@@ -14,7 +14,7 @@ export default{
 </template>
 
 <style scope>
-    #content{
+    #content{ 
         height: 100%;
         display: flex;
         align-items: center;
