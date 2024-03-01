@@ -1,6 +1,14 @@
 <script>
+import CoverItem from './CoverItem.vue';
+
+
 export default{
         nome:'AppHeader',
+
+        components : {
+        CoverItem,
+    },
+
         data(){
             return {
               covers: [
@@ -89,14 +97,22 @@ export default{
     
     
                 <div class="covers-list">
-                    <div 
+                    <!-- <div 
                     v-for="cover in covers" 
                     class="cover"
                     >
                         <img src="" alt="">
                         <h4>Catwoman</h4>
-                    </div>
+                    </div> -->
+                    <CoverItem
+                    v-for="currentCover in covers"
+                    :coverSerie="currentCover.series"
+                    :coverImage="currentCover.humb"
+                    ></CoverItem>
                     
+                </div>
+                <div class="bottone">
+                    <button class="btn">LOAD MORE</button>
                 </div>
                 
         </div>
@@ -120,6 +136,8 @@ header{
         flex-flow: wrap;
         gap: 25px;
 
+        padding: 25px;
+
     }
     .cover{
 
@@ -127,7 +145,20 @@ header{
         
         img{
             width: 100%;
+            height: 185px;
         }
+        
+    }
+    .bottone{
+        display: flex;
+        justify-content: center;
+        padding: 25px 0px;
+    }
+    .btn{
+        background-color: #0282F9;
+        border: #0282F9;
+        color: white;
+        padding: 10px 50px;
         
     }
 }
