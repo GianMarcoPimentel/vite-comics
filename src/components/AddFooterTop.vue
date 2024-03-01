@@ -4,32 +4,24 @@
 
        data() {
         return {
-            programs:[ 
-                    "Characters",
-                    "Comics",
-                    "Movies",
-                    "Tv",
-                    "Games",
-                    "Collectibles",
-                    "Videos",
-                    "Fans",
-                    "News",
-                    "Shop",
-            ],
-            policies : [
-                
-            ],
-            sites:[
-                "DC",
-                "MAD Magazine",
-                "DC Kids",
-                "DC Universe",
-                "DC Power Visa",
-            ],
-            shops:[
-                "Shop DC",
-                "Shop DC collectibles"
-            ]
+            linkList: [
+                    {
+                        title: 'dc comics',
+                        links:['Characters', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News']
+                    },
+                    {
+                        title: 'shop',
+                        links:['Shop DC', 'Shop DC Collectibles']
+                    },
+                    {
+                        title: 'dc',
+                        links:['Terms of Use', 'Privacy Policy (New)', 'Ad Choices', 'Advertising', 'Jobs', 'Subscriptions', 'Talent Workshop', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us']
+                    },
+                    {
+                        title: 'sites',
+                        links:['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa']
+                    },
+                ],
         }
        }
     }
@@ -39,43 +31,17 @@
 <div class="footer-top">
     <div class="container">
         <div class="lists">
-            <div id="first-list">
-                <ul>
-                    <span id="title-list">DC COMICS</span>
-                    <li v-for="list in programs">
-                    {{ list }}
-                    </li>
-                </ul>
-            </div>
-
-            <div id="fourth-list">
-                <span id="title-list">DC COMICS</span>
-                <ul>
-                    <li v-for="shop in shops">
-                    {{ shop }}
-                    </li>
-                </ul>
-            </div>
+    
+    <div v-for="currentLinkList in linkList" class="link-list">
+        <h4>{{ currentLinkList.title }}</h4>
+        <ul>
+            <li v-for="currentLink in currentLinkList.links">{{ currentLink }}</li>
             
-            <div id="second-list">
-                <span id="title-list">DC COMICS</span>
-                <ul>
-                    <li v-for="policy in policies">
-                    {{ policy }}
-                    </li>
-                </ul>
-            </div>
+        </ul>
+    </div>
+    
+</div>
 
-            <div id="third-list">
-                <span id="title-list">DC COMICS</span>
-                <ul>
-                    <li v-for="site in sites">
-                    {{ site }}
-                    </li>
-                </ul>
-            </div>
-            
-        </div>
 
         <div class="logo">
             <img src="/img/dc-logo-bg.png" alt="">
@@ -89,6 +55,11 @@ ul {
     list-style: none;
 
     padding: 0;
+
+    li{
+        color: #ffffff40;
+    }
+
 }
 .footer-top{
     height: 370px;
@@ -110,26 +81,20 @@ ul {
 
         padding: 20px 0;
 
-        #title-list{
+        h4{
             text-transform: uppercase;
             font-size: 1.2em;
+            font-family: 'Barlow Condensed', sans-serif;
 
-            margin-bottom: 20px;
-        }
-    }
-   /*  #first-list{
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        #title-list{
             color: white;
             margin-bottom: 20px;
         }
-        li{
-            color: #ffffff40;
-            list-style-type: none;
-        }
-    } */
+        ul {
+        color: #ccc;
+        font-size: .9em;
+    }
+    }
+   
     .logo{
         z-index: 999;
         
