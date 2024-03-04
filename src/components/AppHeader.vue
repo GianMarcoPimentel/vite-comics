@@ -94,7 +94,7 @@ export default{
     <header>
         <img src="/img/jumbotron.jpg" alt="">
         <div class="container">
-    
+            <h2>current series</h2>
     
                 <div class="covers-list">
                     <!-- <div 

@@ -1,3 +1,5 @@
+/* @use './variables' as *; */
+
 //reset 
 *{
     margin: 0;
@@ -11,4 +13,13 @@
     margin-right: auto;
     height: 100%;
     
+}
+
+h2{
+    display: inline-block;
+    background-color: #0282F9 /* $primary */;
+    padding: 10px 30px;
+    text-transform: uppercase;
+
+    transform: translateY(-50%)
 }

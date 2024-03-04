@@ -12,6 +12,7 @@
 
 <template>
              <div class="cover">
+            
                 <img :src="coverImage" alt="">
                 <h4>{{coverSerie}}</h4>
             </div>
